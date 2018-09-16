@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mongo:
+    image: mongo
+    volumes: 
+      - /path/to/folder:/etc/mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=pass
+    container_name: mongo
+
+
+  mongo-express:
+    image: mongo-express
+    container_name: mongoexpress 
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
