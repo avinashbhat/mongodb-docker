@@ -4,7 +4,11 @@ Containerized the MongoDB and Mongo Express. MongoDB is a free and open-source c
 
 Uploaded the docker images on the Docker Hub as well.
 
-Run using 
+After navigating to the directory, run using 
+```
+docker-compose up -d
+```
+If you wish to pull the images directly from the Docker Hub, run
 ```
 docker run -d avibhat/mongo avibhat/mongoexpress
 ```
